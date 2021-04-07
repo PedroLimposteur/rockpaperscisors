@@ -1,4 +1,4 @@
-echo Say rock, paper of scissors
+echo Say rock, paper or scissors
 read player_choice
 player_choice="${player_choice,,}" # to lower case
 
