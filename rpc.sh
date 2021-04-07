@@ -2,8 +2,12 @@ echo Say rock, paper of scissor
 read player_choice
 player_choice="${player_choice,,}" # to lower case
 
-echo "rock paper scissors" | grep -w -q "$player_choice"
-if [ $? -eq 1 ]; then
+choices=(rock paper scissors)
+for choice in "${choices[@]}"; do
+	if [ "$player_choice" == $choice ]; then ok=1; fi
+done
+
+if [ -z $ok ]; then
 	echo "You must choose rock paper or scissors"
 	exit
 fi
