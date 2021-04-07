@@ -13,7 +13,7 @@ if [ -z $ok ]; then
 fi
 
 
-if [ $1 ] && [ "$1" == "-no-cheat" ]; then
+if [ $1 ] && [ "$1" == "--no-cheat" ]; then
 	echo "y u want no cheat"
 else
 	if [ $player_choice == "rock" ]; then echo "I cast bigger rock. I win"
